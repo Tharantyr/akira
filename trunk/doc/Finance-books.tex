@@ -1,0 +1,94 @@
+\documentclass[8pt,a4paper]{article}
+\begin{document}
+\title{Finance Study Notes}
+\author{Eric Chung}
+\date{17, July, 2007}
+\maketitle
+\section{Analysing and Interpreting the Yield Curve}
+
+\subsection{Definition of Yield}
+The yield on any investment is the interest rate that will make the present value of the cash flows from the investment equal to the initial cost(price) of the investment.
+\[P=\sum_{n=1}^N \frac{C_n}{(1+r)^n}\]
+where
+\begin{description}
+	\item [$C_n$] is the cash flow in the year $n$;
+	\item [$P$] is the price of the investment;
+	\item [$n$] is the number of years.
+\end{description}
+
+\subsection{Current Yield}
+Also known as \textit{flat yield, interest yeild} or \textit{running yield}. It's the simplest measure of the yield on a bond.
+\[rc=\frac{C}{P}\times 100\]
+Current yield ignores any capital gain or loss that might arise from holding and trading a bond and doesn't consider the time value of money.
+
+\subsection{Simple Yield to Maturity}
+\[rs=\frac{C}{P}+\frac{100 - P}{nP}\]
+
+\subsection{Yield to Maturity}
+
+The \textit{yield to maturity} (YTM) or \textit{gross redemption yield} is equivalent to the \textit{internal rate of return} on the bond.
+\[P_d=
+		\frac{C}{(1+rm)^1} +
+		\frac{C}{(1+rm)^2} +		
+		\frac{C}{(1+rm)^3} +...+
+		\frac{C}{(1+rm)^n} +		
+		\frac{M}{(1+rm)}		
+\] 
+where
+\begin{description}
+	\item[$P_d$] is the bond dirty price;
+	\item[$M$] is the par or redemption payment (100);
+	\item[$n$] is the number of interest periods;
+	\item[$C$] is the coupon rate;
+	\item[$rm$] is the annual yield to maturity (the YTM).
+\end{description}
+
+The YTM equation use $rm$ to discount a bond's cash flows back to the next coupon payment and then discount the value at that date back to the date of calculation. In other words $rm$ is the \textit{internal rate of return}(IRR) that equates the value of the discounted cash flows on the bond to the current dirty price of the bond(at the current date).
+
+If the settlement date falls in between coupon dates, the formula is adjusted to allow for the uneven interest period:
+\[P_d=
+		\frac{C}{(1+rm)^w} +
+		\frac{C}{(1+rm)^{1+w}} +
+		\frac{C}{(1+rm)^{2+w}} +...+
+		\frac{C}{(1+rm)^{n-1+w}} +
+		\frac{M}{(1+rm)^{n-1+w}}
+\]
+where
+w is 
+$\frac{\mbox{number of days between the settlement date and the next coupon date}}{\mbox{number of days in the interest period}}$
+and n is the number of coupon payments remaining in the life of bond. The formula can be shorten to:
+\[
+P_d=\sum_{n=1}^N \frac{C}{(1+rm)^{n-1+w}} + \frac{M}{(1+rm)^{n-1+w}}
+\]
+
+\subsection{Yield on a zero-coupon bond}
+Zero-coupon bond has only one cash flow, the redemption payment on maturity. The payment will be par. So a zero-coupon bond is sold at a discount to par and trades at a discount during its life.
+\[
+	P=\frac{C}{(1+rm)^n}
+\]
+
+\subsection{Modifying Bond Yields}
+\subsubsection{Very short-dated bonds}
+The usual convention in the markets is to adjust bond yeilds using money market convention by discounting the cash flow at a simple rate of interest instead of a compound rate.
+\[
+	m=(\frac{\mbox{final cash flow}}{P_d} - 1)\times \frac{B}{\mbox{day to maturity}}
+\]
+where B is the day-base count for the bond.
+\subsubsection{Money market yields}
+From time to time to compare with other money market instruments, we need to convert the bond yield into money market yield.
+\[
+	P_d=\frac{M}{(1+(\frac{r_{me}}{n}\times t))}\times(\frac{C}{n}\times \frac{1-\frac{1}{(1+\frac{r_{me}}{n}\times \frac{365}{360})^N}}{1-\frac{1}{(1+\frac{r_{me}}{n}\times \frac{365}{360})}} + \frac{1}{1-\frac{1}{(1+\frac{r_{me}}{n}\times \frac{365}{360})^{N-1}}})
+\]
+where:\\
+\begin{tabbing}
+$r_{me}$ \=\= is the bond money-market yield\\
+$t$ \>\> is the fraction of the bond coupon period, on a money market basis.
+\end{tabbing}
+
+\subsubsection{Moosmuller yield}
+Similar to money market yield calculation, because it discounts the next coupon from the settlement date using simple rather than compounding interest. The day-count basis remains the one used in the bond markets.
+\[
+P_d=\frac{M}{(1+(\frac{r_m}{n}\times t))}\times (\frac{C}{n}\times \frac{1-\frac{1}{(1+\frac{r_m}{n})^N}}{1-\frac{1}{{1+\frac{r_m}{n}}}} + \frac{1}{1-\frac{1}{(1+\frac{r_m}{n})^{N-1}}})
+\]
+where $r_m$ is the Moosmuller yield.
+\end{document}

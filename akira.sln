@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math", "math\math.vcproj", "{23D08C1C-329F-428A-BA1F-06E7BFC22908}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unitTest", "unitTest\unitTest.vcproj", "{07429814-F7A3-469F-A7F0-B03E31B8C0ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908} = {23D08C1C-329F-428A-BA1F-06E7BFC22908}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "minimaltest", "..\..\sdk\aeryn2\examples\minimaltest\minimaltest.vcproj", "{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Debug|Win32.ActiveCfg = Debug|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Debug|Win32.Build.0 = Debug|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Release|Any CPU.ActiveCfg = Release|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Release|Win32.ActiveCfg = Release|Win32
+		{23D08C1C-329F-428A-BA1F-06E7BFC22908}.Release|Win32.Build.0 = Release|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Debug|Win32.Build.0 = Debug|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Release|Any CPU.ActiveCfg = Release|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Release|Win32.ActiveCfg = Release|Win32
+		{07429814-F7A3-469F-A7F0-B03E31B8C0ED}.Release|Win32.Build.0 = Release|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Debug|Win32.Build.0 = Debug|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Release|Any CPU.ActiveCfg = Release|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Release|Win32.ActiveCfg = Release|Win32
+		{716C2FE8-5990-48AA-AC41-7C73BEA48CF0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

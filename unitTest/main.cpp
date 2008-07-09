@@ -2,24 +2,19 @@
 //
 
 #include "stdafx.h"
-#include <aeryn/test_runner.hpp>
-#include <aeryn/is_equal.hpp>
-#include <aeryn/use_name.hpp>
-#include <iostream>
 #include "vector.h"
+#include <boost/test/unit_test.hpp>
+using namespace boost::unit_test;
 
 extern void Vector3TestCases(void);
 
-int _tmain(int argc, _TCHAR* argv[])
+
+test_suite*
+init_unit_test_suite(int, char* [])
 {
-	using namespace Aeryn;
-
-	TestRunner testRunner;
-	testRunner.Add("Vector3<double> tests", TestCase(USE_NAME(Vector3TestCases)));
+	test_suite* suite = BOOST_TEST_SUITE("Akira Math Library Test Suite");
 	
-	testRunner.Run();
+	suite->add(BOOST_TEST_CASE(&Vector3TestCases));
 
-	char i;
-	std::cin >> i; 
+	return suite;
 }
-
